@@ -76,6 +76,16 @@
       </tr>
 
       <tr>
+        <th>Required Modules</th>
+        <td ng-init="linkRequiredModules()">
+          <span ng-repeat="module in module.requiredModules">
+            <a ng-href="{{module | linkModule}}">{{module}}</a>
+            <span ng-if='!$last'>, </span>
+          </span>
+        </td>
+      </tr>
+
+      <tr>
         <th>Downloads</th>
         <td>
           <span class="count">{{latestRelease.downloadCount}}
